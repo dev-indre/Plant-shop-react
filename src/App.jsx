@@ -1,12 +1,15 @@
+import Header from "./Components/Header";
+import Hero from "./Components/Hero";
+import TopBanner from "./Components/TopBanner";
 
 
 export default function App() {
- 
-
   return (
-    <div className="wrapper">
-    <h1>Plant Shop</h1>
-    </div>
+    <>
+   <TopBanner/>
+   <Header/>
+   <Hero/>
+   </>
   )
 }
 

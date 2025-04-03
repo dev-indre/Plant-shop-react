@@ -1,0 +1,26 @@
+.hero {
+    min-height: 710px;
+    position: relative;
+}
+.hero::before{
+    content: "";
+    position: absolute;
+    background: url("../../assets/img/hero-plant-right.png");
+    bottom: -35px;
+    left: -90px;
+    width: 428px;
+    height: 464px;
+}
+.hero::after{
+    content: "";
+    position: absolute;
+    background: url("../../assets/img/hero-plant-left.png");
+    bottom: 0;
+    right: -90px;
+    width: 100%;
+    max-width: 1040px;
+    height: 800px;
+}
+.dark-line{
+    min-height: 40px;
+}

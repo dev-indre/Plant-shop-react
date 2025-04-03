@@ -19,5 +19,11 @@
   max-width: 1260px;
   margin: 0 auto;
   padding: 0 20px;
-  background: #5bc08A;
+  /* background: #5bc08A; */
+}
+.green-bg {
+   background-color: var(--green); 
+}
+.light-bg{
+  background-color: var(--bggreen);
 }
