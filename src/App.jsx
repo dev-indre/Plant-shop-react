@@ -9,6 +9,7 @@ export default function App() {
    <TopBanner/>
    <Header/>
    <Hero/>
+  
    </>
   )
 }
