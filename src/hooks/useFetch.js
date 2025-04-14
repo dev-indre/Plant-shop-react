@@ -9,33 +9,48 @@ export default function useFetch(url, folder, apiImg) {
     const fetchData = async () => {
       setLoading(true);
       setError(null);
+
       try {
         const response = await fetch(url);
         if (!response.ok) {
-          throw new Error("Failed to retrieve data from API");
+          throw new Error("failed to retrieve from api");
         }
-        const data = await response.json();
-        const dataWithImages = await Promise.all(
-          data.map(async (elem) => {
-            let imgPath;
+
+        const jsonData = await response.json();
+        const dataImages = await Promise.all(
+          jsonData.map(async (elem) => {
+            let imgSrc = "";
             try {
-              imgPath = await import(`../assets/img/${folder}/${elem[apiImg]}`);
-            } catch (error) {}
+              imgSrc = new URL(
+                `../assets/img/${folder}/${elem[apiImg]}`,
+                import.meta.url
+              ).href;
+            } catch (error) {
+              //console.warn("Nepavyko įkelti paveikslėlio:", elem[apiImg]);
+              imgSrc = new URL(
+                `../assets/img/${folder}/empty.svg`,
+                import.meta.url
+              ).href;
+            }
+
             return {
               ...elem,
-              imgSrc: imgPath.default,
+              imgSrc,
             };
           })
         );
-        //await new Promise((resolve) => setTimeout(resolve, 5000));
-        setData(dataWithImages);
+
+        setData(dataImages);
+        console.log(" Duomenys:", dataImages);
       } catch (error) {
         setError(error.message);
       } finally {
         setLoading(false);
       }
     };
+
     fetchData();
   }, [url, folder, apiImg]);
+
   return { data, loading, error };
 }
