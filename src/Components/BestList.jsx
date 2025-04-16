@@ -1,6 +1,7 @@
 import useFetch from "../hooks/useFetch";
 import DataHandler from "../utils/DataHandler";
 import BestCard from "./BestCard";
+import "./Components-style/BestList.css";
 
 export default function BestList() {
   const {
