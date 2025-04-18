@@ -17,6 +17,7 @@ export default function useFetch(url, folder, apiImg) {
         }
 
         const jsonData = await response.json();
+        console.log(jsonData);
         const dataImages = await Promise.all(
           jsonData.map(async (elem) => {
             let imgSrc = "";
