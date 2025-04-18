@@ -14,6 +14,7 @@ export default function PlantsProvider({ children }) {
     "image"
   );
   const value = { plants, loading, error };
+  console.log(value);
   return (
     <PlantsContext.Provider value={value}>{children}</PlantsContext.Provider>
   );
