@@ -10,6 +10,8 @@ export default function PlantCardsList({ filterType, limit }) {
     let filtered = plants;
     if (filterType === "hot") {
       filtered = filtered.filter((plant) => plant.rating === 5);
+    } else if (filterType === "deal") {
+      filtered = filtered.sort((a, b) => b.discount - a.discount);
     }
     return limit ? filtered.slice(0, limit) : filtered;
   };
@@ -23,6 +25,7 @@ export default function PlantCardsList({ filterType, limit }) {
             key={plant.id}
             title={plant.title}
             price={plant.price}
+            discount={plant.discount}
             imgSrc={plant.imgSrc}
           />
         ))}

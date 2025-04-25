@@ -1,5 +1,6 @@
 import BestSection from "./Components/BestSection";
 import CategoriesSection from "./Components/CategoriesSection";
+import DealsSection from "./Components/DealsSection";
 import Header from "./Components/Header";
 import Hero from "./Components/Hero";
 import HotSection from "./Components/HotSection";
@@ -14,6 +15,7 @@ export default function App() {
       <CategoriesSection />
       <BestSection />
       <HotSection />
+      <DealsSection />
     </>
   );
 }
