@@ -1,0 +1,33 @@
+.footer {
+  padding: 48px 0 0 0;
+}
+.second-menu {
+  margin: 24px auto 48px auto;
+}
+.second-menu-links a {
+  color: var(--black);
+  font-weight: 600;
+  font-size: 16px;
+  margin: 0 15px;
+}
+.second-menu-links {
+  margin: 24px auto;
+  display: flex;
+  justify-content: center;
+}
+.footer-banner {
+  background-color: var(--green);
+  min-height: 45px;
+  color: var(--white);
+}
+.footer-banner-text {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  display: flex;
+  min-height: inherit;
+  align-items: center;
+  justify-content: center;
+}

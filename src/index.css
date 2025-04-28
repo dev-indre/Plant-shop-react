@@ -1,13 +1,13 @@
 :root {
-  --green: #50806B;
+  --green: #50806b;
   --bggreen: #e8edde;
-  --lgreen: #5bc08A;
+  --lgreen: #5bc08a;
   --black: #000;
   --red: #d11f1f;
-  --textgrey: #7C8087;
+  --textgrey: #7c8087;
   --white: #fff;
 }
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -22,8 +22,26 @@
   /* background: #5bc08A; */
 }
 .green-bg {
-   background-color: var(--green); 
+  background-color: var(--green);
 }
-.light-bg{
+.light-bg {
   background-color: var(--bggreen);
+}
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.example {
+  font-weight: 600;
+  font-family: "Poppins";
+  font-size: 48px;
+  text-align: center;
+}
+.header-links .active {
+  color: var(--green);
+}
+.active {
+  color: var(--green);
 }

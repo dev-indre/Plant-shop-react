@@ -1,21 +1,21 @@
-import BestSection from "./Components/BestSection";
-import CategoriesSection from "./Components/CategoriesSection";
-import DealsSection from "./Components/DealsSection";
-import Header from "./Components/Header";
-import Hero from "./Components/Hero";
-import HotSection from "./Components/HotSection";
-import TopBanner from "./Components/TopBanner";
+import { Route, Routes } from "react-router-dom";
+import Layout from "./pages/Layout";
+import HomePage from "./pages/HomePage";
+import ProductsPage from "./pages/ProductsPage";
+import AboutPage from "./pages/AboutPage";
+import ContactPage from "./pages/ContactPage";
+import PageNotFound from "./pages/PageNotFound";
 
 export default function App() {
   return (
-    <>
-      <TopBanner />
-      <Header />
-      <Hero />
-      <CategoriesSection />
-      <BestSection />
-      <HotSection />
-      <DealsSection />
-    </>
+    <Routes>
+      <Route element={<Layout />}>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/products" element={<ProductsPage />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/contact" element={<ContactPage />} />
+        <Route path="*" element={<PageNotFound />} />
+      </Route>
+    </Routes>
   );
 }
