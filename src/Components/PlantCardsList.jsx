@@ -9,7 +9,7 @@ export default function PlantCardsList({ filterType, limit }) {
   const getFilteredPlants = (plants) => {
     let filtered = plants;
     if (filterType === "hot") {
-      filtered = filtered.filter((plant) => plant.rating === 5);
+      filtered = filtered.sort((a, b) => b.rating - a.rating);
     } else if (filterType === "deal") {
       filtered = filtered.sort((a, b) => b.discount - a.discount);
     }
@@ -23,8 +23,10 @@ export default function PlantCardsList({ filterType, limit }) {
         {filteredPlants.map((plant) => (
           <PlantCard
             key={plant.id}
+            plantId={plant.id}
             title={plant.title}
             price={plant.price}
+            description={plant.description}
             discount={plant.discount}
             imgSrc={plant.imgSrc}
           />

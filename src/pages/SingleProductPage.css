@@ -1,0 +1,57 @@
+.second-title {
+  padding: 50px 0;
+  font-weight: 400;
+}
+.big-text {
+  font-size: 80px;
+  letter-spacing: 0.02em;
+  padding-right: 20px;
+}
+.plant-name {
+  font-size: 22px;
+  line-height: 1.5;
+  padding-left: 20px;
+  border-left: 1px solid var(--black);
+}
+.plant-content {
+  padding: 150px 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.image-block {
+  width: 50%;
+}
+.plant-image {
+  padding: 5px 10px;
+  max-width: 50%;
+}
+.data-block {
+  padding-left: 80px;
+}
+.data-block h3 {
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 1.5;
+  letter-spacing: -1.5px;
+}
+.data-block p {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.5;
+  margin-bottom: 100px;
+}
+.data-block h4 {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.5;
+  margin: 10px 0 25px 0;
+}
+.random-cards {
+  padding: 90px 0 120px;
+}
+.instruction-block {
+  height: 420px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

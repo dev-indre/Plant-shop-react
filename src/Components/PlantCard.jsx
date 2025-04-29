@@ -1,15 +1,33 @@
+import { Link } from "react-router-dom";
 import Button from "./Button";
 import "./Components-style/PlantCard.css";
 import Image from "./Image";
 
-export default function PlantCard({ plantId, title, imgSrc, price, discount }) {
+export default function PlantCard({
+  plantId,
+  title,
+  imgSrc,
+  price,
+  discount,
+  description,
+}) {
   const discountedPrice = discount
     ? (price * (1 - discount / 100)).toFixed(2)
     : price;
 
+  const plantData = {
+    plantId,
+    title,
+    imgSrc,
+    price,
+    discount,
+    discountedPrice,
+    description,
+  };
+
   return (
     <div className="plant-card">
-      <a>
+      <Link to={`/products/${plantId}`} state={plantData}>
         <div className="img-box">
           {discount > 0 && (
             <div className="discount-block">
@@ -31,7 +49,7 @@ export default function PlantCard({ plantId, title, imgSrc, price, discount }) {
             <span className="plant-price">{price} €</span>
           )}
         </div>
-      </a>
+      </Link>
       <Button colorName={"green-btn"}>Buy</Button>
     </div>
   );
