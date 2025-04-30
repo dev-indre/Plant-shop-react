@@ -1,7 +1,7 @@
 import "./Components-style/Header.css";
 import Logo from "../assets/img/Logo.svg";
 import Search from "../assets/img/Search.svg";
-import Cart from "../assets/img/Cart.svg";
+import Cart from "../assets/img/cart.svg";
 import { NavLink } from "react-router-dom";
 
 export default function Header() {
